@@ -23,7 +23,7 @@ public class RestaurantApiController {
         return restaurantService.findById(id);
     }
 
-    @PostMapping()
+    @PostMapping
     public ResponseEntity<Restaurant> create(@RequestBody CreateRestaurantRequest restaurantRequest) throws URISyntaxException {
         Restaurant restaurant = restaurantService.create(restaurantRequest.convert());
         return ResponseEntity

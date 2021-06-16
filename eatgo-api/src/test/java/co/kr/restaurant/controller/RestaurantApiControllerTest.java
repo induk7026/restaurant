@@ -35,14 +35,13 @@ class RestaurantApiControllerTest {
                 .andExpect(content().string(containsString("승환")));
     }
 
-//    @Test
-//    void createRestaurantTest() throws Exception {
-//
-//        mvc.perform(
-//                post("/restaurant/")
-//        .contentType(MediaType.APPLICATION_JSON)
-//        .content())
-//        .andExpect(content().string(containsString("승환")));
-//
-//    }
+    @Test
+    void createRestaurantTest() throws Exception {
+        mvc.perform(
+                post("/api/restaurant")
+        .contentType(MediaType.APPLICATION_JSON)
+        .content("{\"name\" : \"승환\",\"address\":\"서울\"}"))
+        .andExpect(content().string(containsString("승환")));
+
+    }
 }
