@@ -1,6 +1,6 @@
-package co.kr.restaurant.res.error;
+package co.kr.restaurant.store.error;
 
-import co.kr.restaurant.res.error.domain.ApiError;
+import co.kr.restaurant.store.error.domain.ApiError;
 import javassist.NotFoundException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;

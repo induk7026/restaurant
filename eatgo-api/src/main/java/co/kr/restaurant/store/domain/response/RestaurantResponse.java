@@ -1,4 +1,4 @@
-package co.kr.restaurant.res.domain.response;
+package co.kr.restaurant.store.domain.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

@@ -1,4 +1,4 @@
-package co.kr.restaurant.res.error.domain;
+package co.kr.restaurant.store.error.domain;
 
 import lombok.Getter;
 

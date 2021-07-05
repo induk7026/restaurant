@@ -1,6 +1,6 @@
-package co.kr.restaurant.repository;
+package co.kr.restaurant.store.repository;
 
-import co.kr.restaurant.res.domain.Restaurant;
+import co.kr.restaurant.store.domain.Restaurant;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
