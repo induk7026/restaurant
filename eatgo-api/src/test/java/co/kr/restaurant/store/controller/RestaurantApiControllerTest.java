@@ -67,12 +67,17 @@ class RestaurantApiControllerTest {
                 .andExpect(status().isOk());
     }
 
-    @Test
     void updateRestaurantInvalidTest() throws Exception {
         mvc.perform(
                 put("/api/restaurant/1")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content("{\"name\" : \"\",\"address\":\"\"}"))
                 .andExpect(status().isBadRequest());
+    }
+
+    @Test
+    void detailWithExisted() throws Exception {
+        mvc.perform(get("/restaurant/400"))
+                .andExpect(status().isNotFound());
     }
 }

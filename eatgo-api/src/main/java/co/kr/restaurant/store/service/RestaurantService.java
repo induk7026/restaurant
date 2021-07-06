@@ -15,7 +15,7 @@ public class RestaurantService {
 
     public Restaurant findById(Long id) {
         return restaurantRepository.findById(id)
-                .orElseThrow(IllegalAccessError::new);
+                .orElseThrow(IllegalArgumentException::new);
     }
 
     public Restaurant create(Restaurant restaurant) {

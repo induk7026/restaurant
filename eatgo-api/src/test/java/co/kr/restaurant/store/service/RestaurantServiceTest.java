@@ -12,6 +12,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.BDDMockito.given;
 
@@ -72,5 +73,11 @@ class RestaurantServiceTest {
         assertThat(restaurant.getId()).isEqualTo(1L);
         assertThat(restaurant.getAddress()).isEqualTo("서울시 성북구");
         assertThat(restaurant.getName()).isEqualTo("승환");
+    }
+
+    @Test
+    void detailWithExisted() {
+        assertThatThrownBy(() -> restaurantService.findById(404L))
+                .isInstanceOf(IllegalArgumentException.class);
     }
 }
